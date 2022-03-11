@@ -1,7 +1,7 @@
 // Desafio 1 - Iniciando
 function compareTrue(a, b) {
-  // seu código aqui
-    if(a == true && b === true){
+  
+    if(a === true && b === true){
       return true
     } else {
       return false
@@ -13,7 +13,7 @@ console.log(compareTrue(true, true))
 // Desafio 2
 
 function calcArea(base, heigth) {
-  // seu código aqui
+
     if (base > 0 && heigth > 0) {
       return (base * heigth) / 2
     }
@@ -22,14 +22,32 @@ function calcArea(base, heigth) {
 console.log(calcArea(5, 2))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+var resultado = []
+function splitSentence(algo) {
+    for ( palavra in algo){
+      resultado = algo.split(" ")
+      
+    }
+    return resultado
+  }
+console.log(splitSentence('Caio Pereira Antunes'))
+console.log(splitSentence('go trybe'))
+
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+
+
+
+function concatName(array) {
+  for (let i = 0; i < array.length ; i += 1){
+    
+    return array[array.length - 1] + " " + array[0]
+
+    } 
+} 
+console.log(concatName(['Caio', 'Pereira', 'Antunes', 'Elaine']))
+
+
 
 // Desafio 5
 function footballPoints() {
