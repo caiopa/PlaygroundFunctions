@@ -41,7 +41,7 @@ console.log(splitSentence('go trybe'))
 function concatName(array) {
   for (let i = 0; i < array.length ; i += 1){
     
-    return array[array.length - 1] + " " + array[0]
+    return array[array.length - 1] + ", " + array[0]
 
     } 
 } 
@@ -50,14 +50,26 @@ console.log(concatName(['Caio', 'Pereira', 'Antunes', 'Elaine']))
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, empates) { 
+    if ( wins > 0 || empates > 0 ) {
+      return wins * 3 + empates*1
+    } else if ( wins === 0 && empates === 0 ) {
+      return 0
+    } else {
+      return 'error de valor'
+    }
 }
 
+console.log(footballPoints(1, 2))
+
 // Desafio 6
+
 function highestCount() {
-  // seu código aqui
+
+  
 }
+
+
 
 // Desafio 7
 function catAndMouse() {
