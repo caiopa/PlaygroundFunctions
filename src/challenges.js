@@ -84,16 +84,33 @@ let repete = 0;
   return repete
 }
     
-console.log(highestCount([0, 9, 2, 3, 9, 5, 7, 9, 9]))
+/* console.log(highestCount([0, 9, 2, 3, 9, 5, 7, 9, 9]))
 console.log(highestCount([0, 0, 0]))
 console.log(highestCount([0, 10, 2, 3, 9, 5, 7, 9, 9]))
 console.log(highestCount([10, 10, 2, 3, 9, 5, 7, 9, 9]))
-
+ */
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+//verificar posiçao de cada um
+// ver distancia entre mouse e cat
+function catAndMouse(mouse, cat1, cat2) {
+ var resultado = "";
+  if(Math.abs(cat2-mouse) > Math.abs(cat1-mouse)) {
+    resultado = "cat1"
+  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    resultado ="cat2"
+  } else {
+    resultado ="os gatos trombam e o rato foge"
+  }
+  return resultado
+  }
 
+console.log(catAndMouse(0, 3, 2)) // 2
+console.log(catAndMouse(10, 4, 22)) // 1
+console.log(catAndMouse(0, 6, 12)) // 1
+console.log(catAndMouse(0, 6, 6)) // nd
+console.log(catAndMouse(0, 5, 6)) // 1
+console.log(catAndMouse(0, -6, 6)) // nd
+console.log(catAndMouse(1, 0, 2)) //nd
 // Desafio 8
  
 function fizzBuzz(arrayNumeros) {
