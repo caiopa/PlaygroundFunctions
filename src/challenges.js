@@ -1,61 +1,52 @@
 // Desafio 1 - Iniciando
-function compareTrue(a, b){
-
+function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
   } else {
-    return false
+    return false;
   }
-
-};
+}
 /* console.log(compareTrue(true, true)) */
 
 // Desafio 2
 
 function calcArea(base, heigth) {
-
   if (base > 0 && heigth > 0) {
-    return (base * heigth) / 2
+    return (base * heigth) / 2;
   }
 }
 
 /* console.log(calcArea(5, 2)) */
 
 // Desafio 3
-var resultado = []
+var resultado = [];
 
 function splitSentence(algo) {
   for (palavra in algo) {
-    resultado = algo.split(" ")
-
+    resultado = algo.split(' ');
   }
-  return resultado
+  return resultado;
 }
 /* console.log(splitSentence('Caio Pereira Antunes'))
 console.log(splitSentence('go trybe')) */
-
 
 // Desafio 4
 
 function concatName(array) {
   for (let i = 0; i < array.length; i += 1) {
-
-    return array[array.length - 1] + ", " + array[0]
-
+    return array[array.length - 1] + ', ' + array[0];
   }
 }
 /* console.log(concatName(['Caio', 'Pereira', 'Antunes', 'Elaine'])) */
 
-
-
 // Desafio 5
 function footballPoints(wins, empates) {
   if (wins > 0 || empates > 0) {
-    return wins * 3 + empates * 1
+    return wins * 3 + empates * 1;
   } else if (wins === 0 && empates === 0) {
-    return 0
+    return 0;
   } else {
-    return 'error de valor'
+    return 'error de valor';
   }
 }
 
@@ -63,27 +54,25 @@ function footballPoints(wins, empates) {
 
 // Desafio 6
 
-
-
 function highestCount(numeros) {
-let maiorNumero = numeros[0];
-let repete = 0;
+  let maiorNumero = numeros[0];
+  let repete = 0;
 
-  for(let i = 0; i < numeros.length; i+=1){
-    if(maiorNumero < numeros[i]){
-      maiorNumero = numeros[i]
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (maiorNumero < numeros[i]) {
+      maiorNumero = numeros[i];
     }
   }
 
-  for(let i = 0; i < numeros.length; i+=1){
-    var valorAtual = numeros[i]
-    if (valorAtual === maiorNumero){
-      repete+=1
+  for (let i = 0; i < numeros.length; i += 1) {
+    var valorAtual = numeros[i];
+    if (valorAtual === maiorNumero) {
+      repete += 1;
     }
   }
-  return repete
+  return repete;
 }
-    
+
 /* console.log(highestCount([0, 9, 2, 3, 9, 5, 7, 9, 9]))
 console.log(highestCount([0, 0, 0]))
 console.log(highestCount([0, 10, 2, 3, 9, 5, 7, 9, 9]))
@@ -93,28 +82,49 @@ console.log(highestCount([10, 10, 2, 3, 9, 5, 7, 9, 9]))
 //verificar posiçao de cada um
 // ver distancia entre mouse e cat
 function catAndMouse(mouse, cat1, cat2) {
- var resultado = "";
-  if(Math.abs(cat2-mouse) > Math.abs(cat1-mouse)) {
-    resultado = "cat1"
+  var resultado = '';
+  if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
+    resultado = 'cat1';
   } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
-    resultado ="cat2"
+    resultado = 'cat2';
   } else {
-    resultado ="os gatos trombam e o rato foge"
+    resultado = 'os gatos trombam e o rato foge';
   }
-  return resultado
-  }
-
+  return resultado;
+}
+/* 
 console.log(catAndMouse(0, 3, 2)) // 2
 console.log(catAndMouse(10, 4, 22)) // 1
 console.log(catAndMouse(0, 6, 12)) // 1
 console.log(catAndMouse(0, 6, 6)) // nd
 console.log(catAndMouse(0, 5, 6)) // 1
 console.log(catAndMouse(0, -6, 6)) // nd
-console.log(catAndMouse(1, 0, 2)) //nd
+console.log(catAndMouse(1, 0, 2)) */ //nd
+
 // Desafio 8
- 
-function fizzBuzz(arrayNumeros) {
+
+function fizzBuzz(numeros) {
+  let resultado = [];
+
+  for (let i = 0; i < numeros.length; i += 1) {
+    if(numeros[i] % 3 === 0 && numeros[i] % 5 === 0){
+      resultado.push('fizzBuzz')
+    }else if ( numeros[i] % 3 === 0){
+      resultado.push('fizz')
+    }else if( numeros[i] % 5 === 0) {
+      resultado.push('buzz')
+    }else {
+      resultado.push('bug!')
+    }
+  }
+  return resultado
 }
+
+console.log(fizzBuzz([2, 5, 6, 10, 15]))
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([7, 9]))
+console.log(fizzBuzz([9, 25]))
+
 // Desafio 9
 function encode() {
   // seu código aqui
