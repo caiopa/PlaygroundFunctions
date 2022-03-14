@@ -1,4 +1,5 @@
 // Desafio 1 - Iniciando
+
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
@@ -22,7 +23,7 @@ function calcArea(base, heigth) {
 var resultado = [];
 
 function splitSentence(algo) {
-  for (palavra in algo) {
+  for (i in algo) {
     resultado = algo.split(' ');
   }
   return resultado;
@@ -127,59 +128,76 @@ console.log(fizzBuzz([9, 25])) */
 
 // Desafio 9
 function encode(string) {
-let resultado = string.split('')
+  let resultado = string.split('')
 
-    for(let i = 0; i < string.length; i+=1) {
-      if(resultado[i] === 'a' || resultado[i] === 'A'){
-        resultado[i] = 1
-      }else if ( resultado[i] === 'e' || resultado[i] === 'E'){
-        resultado[i] = 2
-      }else if ( resultado[i] === 'i' || resultado[i] === 'I' ){
-        resultado[i] = 3
-      }else if ( resultado[i] === 'o' || resultado[i] === 'O'){
-        resultado[i] = 4
-      }else if ( resultado[i] === 'u' || resultado[i] === 'U'){
-        resultado[i] = 5
-      }
+  for (let i = 0; i < string.length; i += 1) {
+    if (resultado[i] === 'a' || resultado[i] === 'A') {
+      resultado[i] = 1
+    } else if (resultado[i] === 'e' || resultado[i] === 'E') {
+      resultado[i] = 2
+    } else if (resultado[i] === 'i' || resultado[i] === 'I') {
+      resultado[i] = 3
+    } else if (resultado[i] === 'o' || resultado[i] === 'O') {
+      resultado[i] = 4
+    } else if (resultado[i] === 'u' || resultado[i] === 'U') {
+      resultado[i] = 5
+    }
   }
   return resultado.join('')
 }
 
-console.log(encode('he there'));
+/* console.log(encode('he there'));
 console.log(encode('Caio Pereira Antunes'));
-
+ */
 function decode(palavra) {
-let resposta =  palavra.split('')
+  let resposta = palavra.split('')
 
-  for(i in palavra){
-  if(resposta[i] === '1') {
-    resposta[i] = 'a'
-  }else if ( resposta[i] === '2'){
-    resposta[i] = 'e'
-  }else if ( resposta[i] === '3'){
-    resposta[i] = 'i'
-  }else if ( resposta[i] === '4'){
-    resposta[i] = 'o'
-  }else if ( resposta[i] === '5'){
-    resposta[i] = 'u'
+  for (i in palavra) {
+    if (resposta[i] === '1') {
+      resposta[i] = 'a'
+    } else if (resposta[i] === '2') {
+      resposta[i] = 'e'
+    } else if (resposta[i] === '3') {
+      resposta[i] = 'i'
+    } else if (resposta[i] === '4') {
+      resposta[i] = 'o'
+    } else if (resposta[i] === '5') {
+      resposta[i] = 'u'
+    }
   }
-}
   return resposta.join('')
 }
-
+/* 
 console.log(decode('h2 th2r2'));
-console.log(decode('C134 P2r23r1 1nt5n2s'));
-
+console.log(decode('C134 P2r23r1 1nt5n2s')); */
 
 
 
 
 // Desafio 10
-function techList() {
 
-    
+function techList(array, nome) {
+let novoArray = array.sort()
+let nomes = nome
+
+
+  for(let i = 0; i < array.length; i += 1){
+   var newObject = {
+     tech: novoArray[i],
+     nome: nomes,
+   }
+   return newObject
+  }
+  
 
 }
+
+console.log(techList(["java", "node", "seila"], "caio"))
+
+
+
+
+
 
 module.exports = {
   calcArea,
