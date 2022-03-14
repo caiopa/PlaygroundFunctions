@@ -107,36 +107,78 @@ function fizzBuzz(numeros) {
   let resultado = [];
 
   for (let i = 0; i < numeros.length; i += 1) {
-    if(numeros[i] % 3 === 0 && numeros[i] % 5 === 0){
-      resultado.push('fizzBuzz')
-    }else if ( numeros[i] % 3 === 0){
-      resultado.push('fizz')
-    }else if( numeros[i] % 5 === 0) {
-      resultado.push('buzz')
-    }else {
-      resultado.push('bug!')
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (numeros[i] % 3 === 0) {
+      resultado.push('fizz');
+    } else if (numeros[i] % 5 === 0) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
     }
   }
-  return resultado
+  return resultado;
 }
 
-console.log(fizzBuzz([2, 5, 6, 10, 15]))
+/* console.log(fizzBuzz([2, 5, 6, 10, 15]))
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 console.log(fizzBuzz([7, 9]))
-console.log(fizzBuzz([9, 25]))
+console.log(fizzBuzz([9, 25])) */
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+let resultado = string.split('')
+
+    for(let i = 0; i < string.length; i+=1) {
+      if(resultado[i] === 'a' || resultado[i] === 'A'){
+        resultado[i] = 1
+      }else if ( resultado[i] === 'e' || resultado[i] === 'E'){
+        resultado[i] = 2
+      }else if ( resultado[i] === 'i' || resultado[i] === 'I' ){
+        resultado[i] = 3
+      }else if ( resultado[i] === 'o' || resultado[i] === 'O'){
+        resultado[i] = 4
+      }else if ( resultado[i] === 'u' || resultado[i] === 'U'){
+        resultado[i] = 5
+      }
+  }
+  return resultado.join('')
 }
 
-function decode() {
-  // seu código aqui
+console.log(encode('he there'));
+console.log(encode('Caio Pereira Antunes'));
+
+function decode(palavra) {
+let resposta =  palavra.split('')
+
+  for(i in palavra){
+  if(resposta[i] === '1') {
+    resposta[i] = 'a'
+  }else if ( resposta[i] === '2'){
+    resposta[i] = 'e'
+  }else if ( resposta[i] === '3'){
+    resposta[i] = 'i'
+  }else if ( resposta[i] === '4'){
+    resposta[i] = 'o'
+  }else if ( resposta[i] === '5'){
+    resposta[i] = 'u'
+  }
 }
+  return resposta.join('')
+}
+
+console.log(decode('h2 th2r2'));
+console.log(decode('C134 P2r23r1 1nt5n2s'));
+
+
+
+
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+
+    
+
 }
 
 module.exports = {
