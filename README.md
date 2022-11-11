@@ -2,7 +2,7 @@
 
 Projeto realizado no módulo de fundamento na Trybe.
 
-# Habilidades e Objetivos
+## Habilidades e Objetivos
 
 - Escrever códigos em JavaScript que usam variáveis e tipos primitivos;
 - Utilizar conceitos da linguagem como a tipagem dinâmica e operadores lógicos/aritméticos/de atribuição no seu código;
